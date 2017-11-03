@@ -13,8 +13,7 @@ var LocationSchema = new mongoose.Schema({
 //This did NOT work for me, set the index directly on DB as explained in exercise
 //LocationSchema.index({ category: 1, loc: "2dsphere" });
 
-//Replace with URL to your own mongolab-db
-const MONGO_DB = 'INSERT_YOUR_CONNECTION_STRING';
+const MONGO_DB = 'mongodb://CrunchyPancake:Klippe911@ds245805.mlab.com:45805/friendfinder';
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGO_DB, { useMongoClient: true });
 
