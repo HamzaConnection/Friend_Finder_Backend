@@ -15,7 +15,7 @@ app.post('/register', function (req, res, next) {
   res.send('Login!')
   facade.register(req.userName, req.coordinates, req.distance, function(err, docs) {
     if (err) {
-      return console.log('error');
+      return console.log('error:' + err);
     }
     res.send({users: docs})
   });
